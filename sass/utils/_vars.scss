@@ -1,0 +1,18 @@
+:root {
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration: 250ms;
+
+  --background-color-hero: #2f303a;
+  --hero-title-color: #ffffff;
+  --background-color-team: #f5f4fa;
+  --link-color: #2196f3;
+  --btn-color: #188ce8;
+  --soc-link: #ffffff;
+  --soc-icon: #afb1b8;
+  --company: #2196f3;
+  --team-social__link: #2196f3;
+  --team-social-icon: #ffffff;
+  --card-link: translateY(-100%);
+  --portfolio-item: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}

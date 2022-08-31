@@ -1,0 +1,141 @@
+.header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+}
+
+.header-list-portfolio {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-left: 93px;
+}
+.header-list-contact {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.header-item-portfolio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.portfolio-icon {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.header-container-portfolio {
+  margin-left: auto;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.portfolio-list {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 50px;
+}
+.portfolio-list-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 30px;
+}
+.portfolio-item {
+  background: #ffffff;
+  transition: box-shadow var(--duration) var(--timing-function);
+  &:hover,
+  &:focus {
+    box-shadow: var(--portfolio-item);
+  }
+}
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.text-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  padding: 63px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+  transition: transform var(--duration) var(--timing-function);
+  .card-link:hover & {
+    transform: var(--card-link);
+  }
+  .card-link:focus & {
+    transform: var(--card-link);
+  }
+}
+
+.portfolio-list-items li img {
+  width: 370px;
+}
+.portfolio-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  background: #f5f4fa;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  border: 0;
+  padding: 6px 22px;
+  transition: background-color var(--duration) var(--timing-function),
+    color var(--duration) var(--timing-function);
+  box-shadow: var(--duration) var(--timing-function);
+  &:hover,
+  &:focus {
+    background-color: #2196f3;
+    color: #ffffff;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.portfolio-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: #212121;
+  margin-bottom: 4px;
+}
+.portfolio-text {
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+.portfolio-item-bottom {
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  padding: 20px 24px;
+}
