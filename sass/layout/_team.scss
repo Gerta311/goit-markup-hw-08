@@ -1,8 +1,16 @@
 .team {
   background-color: #f5f4fa;
   background-color: var(--background-color-team);
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include tablet {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .team-icon {
   content: "";
@@ -11,6 +19,7 @@
 }
 .team-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 .team-soc {
@@ -45,12 +54,22 @@
 
 .team-title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
   margin-bottom: 50px;
+  @include tablet {
+    font-size: 28px;
+    line-height: 1.17;
+    margin-bottom: 30px;
+  }
+  @include desktop {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
 }
 
 .team-item {
@@ -58,6 +77,13 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  width: 100%;
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
 }
 .team-after-title {
   font-weight: 500;
@@ -80,46 +106,4 @@
 .info {
   padding-top: 30px;
   padding-bottom: 30px;
-}
-.client {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-.client-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-  margin-bottom: 50px;
-}
-.client-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  grid-row: 0;
-}
-
-.company {
-  display: flex;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  width: calc((1170px - 150px) / 6);
-  height: 92px;
-  justify-content: center;
-  align-items: center;
-  color: #afb1b8;
-  transition: border-color var(--duration) var(--timing-function),
-    color var(--duration) var(--timing-function);
-  &:hover,
-  &:focus {
-    border-color: var(--company);
-    color: var(--company);
-  }
-}
-.company-icon {
-  fill: #afb1b8;
-  fill: currentColor;
 }

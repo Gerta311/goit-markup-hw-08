@@ -2,6 +2,9 @@
   display: flex;
   align-items: center;
   padding-bottom: 94px;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .work__title {
@@ -11,7 +14,6 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
-
   margin-bottom: 50px;
 }
 .work__list {
@@ -19,17 +21,16 @@
   gap: 30px;
 }
 .work__item {
+  display: flex;
   position: relative;
 }
 
-.box {
-  width: 370px;
-  height: 70px;
-  background-color: rgba(47, 48, 58, 0.8);
+.box__text {
   position: absolute;
   bottom: 0%;
-}
-.box__text {
+
+  width: 370px;
+  height: 70px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -39,9 +40,9 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
-
   padding-top: 27px;
   padding-right: auto;
   padding-bottom: 27px;
   padding-left: auto;
+  background-color: rgba(47, 48, 58, 0.8);
 }

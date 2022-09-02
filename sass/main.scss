@@ -1,4 +1,5 @@
 @import "./utils/vars";
+@import "./utils/mixins";
 
 @import "./base/reset";
 @import "./base/common";
@@ -7,9 +8,10 @@
 
 @import "./layout/header";
 @import "./layout/hero";
-@import "./layout/list-item";
+@import "./layout/column";
 @import "./layout/work";
 @import "./layout/team";
+@import "./layout/client";
 @import "./layout/footer";
 @import "./layout/portfolio";
 @import "./layout/modal";
