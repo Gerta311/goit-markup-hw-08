@@ -1457,12 +1457,6 @@ img {
   padding-left: 24px;
   width: 100%;
 }
-@media screen and (min-width: 1200px) {
-  .form-label {
-    font-size: 14px;
-    line-height: 24px;
-  }
-}
 .form-label a {
   color: #2196f3;
 }
@@ -1499,10 +1493,4 @@ img {
   color: #2196f3;
   letter-spacing: 0.03em;
   text-decoration: underline;
-}
-@media screen and (min-width: 1200px) {
-  .modal-link {
-    font-size: 14px;
-    line-height: 24px;
-  }
 }/*# sourceMappingURL=main.css.map */
