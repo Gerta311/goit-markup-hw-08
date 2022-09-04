@@ -485,19 +485,28 @@ img {
 .column__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 30px;
 }
 
-.column__item {
+.wrapper {
   display: flex;
-  width: 270px;
+  justify-content: center;
+  align-items: center;
   height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
-  justify-content: center;
-  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .column__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .column__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .column__title {
@@ -516,7 +525,6 @@ img {
   letter-spacing: 0.03em;
   color: #757575;
   margin-top: 10px;
-  max-width: 270px;
 }
 
 .work {
@@ -748,9 +756,7 @@ img {
 }
 
 .client-item {
-  display: flex;
-  justify-content: center;
-  max-width: 100%;
+  width: calc((100% - 30px) / 2);
 }
 @media screen and (min-width: 768px) {
   .client-item {
@@ -767,7 +773,6 @@ img {
   display: flex;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  width: 170px;
   height: 92px;
   justify-content: center;
   align-items: center;
@@ -832,10 +837,6 @@ img {
   color: #ffffff;
 }
 
-.footer-list {
-  margin-bottom: 20px;
-}
-
 .addres {
   font-style: normal;
   margin-top: 20px;
@@ -872,17 +873,6 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
-}
-
-.social {
-  text-align: center;
-  margin-bottom: 60px;
-}
-@media screen and (min-width: 1200px) {
-  .social {
-    margin-left: 70px;
-    margin-bottom: 0;
-  }
 }
 
 .social-title {
@@ -1016,6 +1006,7 @@ img {
 .form-wrapper {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 60px;
 }
 @media screen and (min-width: 768px) {
   .form-wrapper {
@@ -1027,6 +1018,7 @@ img {
     width: auto;
     flex: 1 1 auto;
     margin-left: 93px;
+    margin-top: 0;
   }
 }
 
@@ -1034,25 +1026,51 @@ img {
   text-align: center;
   margin-bottom: 60px;
 }
+@media screen and (min-width: 768px) {
+  .footer-info {
+    margin-bottom: 0;
+    flex: 0 1 50%;
+    max-width: 50%;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer-info {
+    flex: 0 1 auto;
+    max-width: none;
     text-align: left;
     margin-bottom: 0;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .footer-info,
-.social {
+  .social {
     flex: 0 1 50%;
     max-width: 50%;
   }
 }
 @media screen and (min-width: 1200px) {
-  .footer-info,
-.social {
+  .social {
     flex: 0 1 auto;
     max-width: none;
+  }
+}
+
+.social {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .social {
+    flex: 0 1 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .social {
+    flex: 0 1 auto;
+    max-width: none;
+    text-align: left;
+    margin-left: 70px;
+    margin-bottom: 0;
   }
 }
 
@@ -1105,8 +1123,14 @@ img {
 }
 
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .portfolio-list {
@@ -1256,7 +1280,7 @@ img {
 .modal {
   position: absolute;
   background-color: #ffffff;
-  max-width: 528px;
+  max-width: 450px;
   min-height: 581px;
   border-radius: 4px;
   top: 50%;
@@ -1413,33 +1437,44 @@ img {
 
 .form {
   position: relative;
-  text-align: center;
   margin-top: 20px;
   margin-bottom: 30px;
 }
+@media screen and (min-width: 1200px) {
+  .form {
+    text-align: center;
+  }
+}
 
 .form-label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
+  position: relative;
+  display: block;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 14px;
   letter-spacing: 0.03em;
   color: #757575;
+  padding-left: 24px;
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .form-label {
+    font-size: 14px;
+    line-height: 24px;
+  }
 }
 .form-label a {
   color: #2196f3;
 }
 .form-label span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
   width: 16px;
   height: 16px;
   border: 2px solid #212121;
   border-radius: 2px;
+  transform: translateY(-50%);
   transition: border-color var(--duration) var(--timing-function);
 }
 .modal-check:checked + .form-label span {
@@ -1459,9 +1494,15 @@ img {
 
 .modal-link {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 14px;
   color: #2196f3;
   letter-spacing: 0.03em;
   text-decoration: underline;
+}
+@media screen and (min-width: 1200px) {
+  .modal-link {
+    font-size: 14px;
+    line-height: 24px;
+  }
 }/*# sourceMappingURL=main.css.map */

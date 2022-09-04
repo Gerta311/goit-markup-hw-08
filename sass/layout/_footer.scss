@@ -42,9 +42,6 @@
   letter-spacing: 0.03em;
   color: #ffffff;
 }
-.footer-list {
-  margin-bottom: 20px;
-}
 
 .addres {
   font-style: normal;
@@ -79,15 +76,6 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
-}
-.social {
-  text-align: center;
-  margin-bottom: 60px;
-
-  @include desktop {
-    margin-left: 70px;
-    margin-bottom: 0;
-  }
 }
 .social-title {
   font-size: 14px;
@@ -216,6 +204,7 @@
 .form-wrapper {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 60px;
 
   @include tablet {
     width: 100%;
@@ -225,18 +214,27 @@
     width: auto;
     flex: 1 1 auto;
     margin-left: 93px;
+    margin-top: 0;
   }
 }
 .footer-info {
   text-align: center;
   margin-bottom: 60px;
 
+  @include tablet {
+    margin-bottom: 0;
+    flex: 0 1 50%;
+    max-width: 50%;
+  }
+
   @include desktop {
+    flex: 0 1 auto;
+    max-width: none;
     text-align: left;
     margin-bottom: 0;
   }
 }
-.footer-info,
+
 .social {
   @include tablet {
     flex: 0 1 50%;
@@ -246,5 +244,21 @@
   @include desktop {
     flex: 0 1 auto;
     max-width: none;
+  }
+}
+
+.social {
+  text-align: center;
+  @include tablet {
+    flex: 0 1 50%;
+    max-width: 50%;
+  }
+
+  @include desktop {
+    flex: 0 1 auto;
+    max-width: none;
+    text-align: left;
+    margin-left: 70px;
+    margin-bottom: 0;
   }
 }

@@ -13,19 +13,25 @@
 .column__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 30px;
 }
-
-.column__item {
+.wrapper {
   display: flex;
-  width: 270px;
+  justify-content: center;
+  align-items: center;
   height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
-  justify-content: center;
-  align-items: center;
+}
+
+.column__item {
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .column__title {
@@ -44,5 +50,4 @@
   letter-spacing: 0.03em;
   color: #757575;
   margin-top: 10px;
-  max-width: 270px;
 }

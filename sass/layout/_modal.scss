@@ -10,7 +10,7 @@
 .modal {
   position: absolute;
   background-color: #ffffff;
-  max-width: 528px;
+  max-width: 450px;
   min-height: 581px;
   border-radius: 4px;
   top: 50%;
@@ -166,31 +166,40 @@
 
 .form {
   position: relative;
-  text-align: center;
   margin-top: 20px;
   margin-bottom: 30px;
+
+  @include desktop {
+    text-align: center;
+  }
 }
 .form-label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
+  position: relative;
+  display: block;
+  // gap: 7px;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 14px;
   letter-spacing: 0.03em;
   color: #757575;
+  padding-left: 24px;
+  width: 100%;
+  @include desktop {
+    font-size: 14px;
+    line-height: 24px;
+  }
   a {
     color: #2196f3;
   }
   span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
     width: 16px;
     height: 16px;
     border: 2px solid #212121;
     border-radius: 2px;
+    transform: translateY(-50%);
     transition: border-color var(--duration) var(--timing-function);
     .modal-check:checked + & {
       background-color: #2196f3;
@@ -211,9 +220,14 @@
 
 .modal-link {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 14px;
   color: #2196f3;
   letter-spacing: 0.03em;
   text-decoration: underline;
+
+  @include desktop {
+    font-size: 14px;
+    line-height: 24px;
+  }
 }
