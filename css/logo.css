@@ -1,0 +1,24 @@
+.logo {
+  font-family: "raleway", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.166;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  transition: color var(--duration) var(--timing-function);
+}
+.logo:hover, .logo:focus {
+  color: #2196f3;
+}
+
+.logo__web {
+  color: #2196f3;
+}
+
+.logo__studio {
+  color: #000000;
+  transition: color var(--duration) var(--timing-function);
+}
+.logo__studio:hover, .logo__studio:focus {
+  color: #2196f3;
+}/*# sourceMappingURL=logo.css.map */

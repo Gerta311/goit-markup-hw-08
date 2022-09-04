@@ -47,9 +47,21 @@
 }
 .portfolio-list {
   display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  column-gap: 8px;
+
+  margin-bottom: 40px;
+  @media screen and (max-width: 767px) {
+    row-gap: 15px;
+    max-width: 326px;
+  }
+  @include tablet {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @include desktop {
+    margin-bottom: 50px;
+  }
 }
 .portfolio-list-items {
   display: flex;
@@ -91,9 +103,34 @@
   }
 }
 
-.portfolio-list-items li img {
-  width: 370px;
+.portfolio-list-items {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 30px;
 }
+.portfolio-item {
+  width: 100%;
+
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 60px) / 3);
+  }
+
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+
+  transition: box-shadow var(--duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
 .portfolio-btn {
   font-weight: 500;
   font-size: 16px;
@@ -101,7 +138,7 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
-  background: #f5f4fa;
+  background-color: #f5f4fa;
   border-radius: 4px;
   cursor: pointer;
   font-family: inherit;

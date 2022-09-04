@@ -24,9 +24,16 @@ button {
 img {
   display: block;
   max-width: 100%;
-  height: auto;
-  width: 100%;
 }
 .body {
   font-family: "Roboto", sans-serif;
+}
+.no-scroll {
+  overflow: hidden;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
